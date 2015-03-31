@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="L9p-HN-TK9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="lVq-mw-I4Y">
+            <objects>
+                <collectionViewController id="L9p-HN-TK9" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Eve-LF-f36">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.15269726556821686" green="0.86882769337016574" blue="0.85971017784311499" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="B9B-Ld-fIG">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PintrestCell" reuseIdentifier="PintrestCell" id="RsW-dh-hPZ" customClass="CollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ct-B2-21y">
+                                            <rect key="frame" x="13" y="13" width="169" height="174"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="0ct-B2-21y" secondAttribute="centerY" id="6Wb-SH-e1u"/>
+                                    <constraint firstItem="0ct-B2-21y" firstAttribute="trailing" secondItem="RsW-dh-hPZ" secondAttribute="trailingMargin" constant="-10" id="GlG-M9-Jbm"/>
+                                    <constraint firstAttribute="centerX" secondItem="0ct-B2-21y" secondAttribute="centerX" id="Ose-1i-hNs"/>
+                                    <constraint firstItem="0ct-B2-21y" firstAttribute="leading" secondItem="RsW-dh-hPZ" secondAttribute="leadingMargin" constant="5" id="i8a-9I-0YB"/>
+                                    <constraint firstItem="0ct-B2-21y" firstAttribute="bottom" secondItem="RsW-dh-hPZ" secondAttribute="bottomMargin" constant="-5" id="urz-F7-KUP"/>
+                                    <constraint firstItem="0ct-B2-21y" firstAttribute="top" secondItem="RsW-dh-hPZ" secondAttribute="topMargin" constant="5" id="xlY-QD-nZO"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Wb-SH-e1u"/>
+                                        <exclude reference="Ose-1i-hNs"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="pinterestCellImage" destination="0ct-B2-21y" id="SFF-k7-DCk"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="L9p-HN-TK9" id="jo9-yw-i6b"/>
+                            <outlet property="delegate" destination="L9p-HN-TK9" id="JHt-SO-fRJ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wD5-ST-69Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="351"/>
+        </scene>
+    </scenes>
+</document>
